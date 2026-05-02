@@ -1,30 +1,69 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>المطبخ التركي 🇹🇷</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ilham Food - Cuisine Turque</title>
+    <!-- Liaison avec le fichier CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Polices élégantes -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <a href="index.html" class="back-btn">🏠 الصفحة الرئيسية</a>
-        <h1>المطبخ التركي 🇹🇷</h1>
+
+    <header class="page-header">
+        <div class="header-content">
+            <a href="index.html" class="back-btn">← Retour à l'accueil</a>
+            <h1>Cuisine Turque 🇹🇷</h1>
+            <p>L'excellence des saveurs d'Istanbul</p>
+        </div>
     </header>
 
-    <div class="dishes-container">
-        <div class="dish-card" onclick="showPrice('أضنة كباب', '80 درهم')">
-            <img src="https://api.americangarden.us/wp-content/uploads/2024/02/Adana-Kebab.jpg" alt="Kebab">
-            <h3>أضنة كباب</h3>
+    <main class="dishes-container">
+        <!-- Plat 1: Iskender Kebab -->
+        <div class="dish-card" onclick="showPrice('Iskender Kebab', '95 DH')">
+            <div class="image-wrapper">
+                <img src="https://move2turkey.com/wp-content/uploads/2020/05/Homemade-Iskender-Kebab-Recipe-1.jpg" alt="Iskender Kebab">
+                <div class="overlay">
+                    <span class="view-price">Voir le prix</span>
+                </div>
+            </div>
+            <div class="dish-info">
+                <h3>Iskender Kebab</h3>
+                <p>Viande grillée sur pain pita avec sauce tomate et beurre fondu.</p>
+            </div>
         </div>
-        <div class="dish-card" onclick="showPrice('بقلاوة تركية', '40 درهم')">
-            <img src="https://cdn.salla.sa/VqOGnd/5a1594f2-cb9f-4f6e-8910-c0bee8d03128-1000x666.66666666667-KPE80ZVZb93MAdOimkUqp1scw6AO3G6krrOfTDup.jpg" alt="Baklava">
-            <h3>بقلاوة تركية</h3>
+
+        <!-- Plat 2: Pide -->
+        <div class="dish-card" onclick="showPrice('Pide Turque', '50 DH')">
+            <div class="image-wrapper">
+                <img src="https://cdn.alweb.com/thumbs/recipes/article/fit727x484/%D8%B7%D8%B1%D9%82-%D8%AD%D8%B4%D9%88%D8%A7%D8%AA-%D8%A7%D9%84%D8%A8%D9%8A%D8%AA%D8%B2%D8%A7-%D8%A7%D9%84%D8%AA%D8%B1%D9%83%D9%8A%D8%A9.jpg" alt="Pide">
+                <div class="overlay">
+                    <span class="view-price">Voir le prix</span>
+                </div>
+            </div>
+            <div class="dish-info">
+                <h3>Pide (Pizza Turque)</h3>
+                <p>Pain plat en forme de bateau garni de fromage ou de viande hachée.</p>
+            </div>
         </div>
-        <div class="dish-card" onclick="showPrice('إسكندر كباب', '95 درهم')">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_k7f8rYR1vc6sIRuHI6kJwuHALt-GBz1J9A&s" alt="Iskender">
-            <h3>إسكندر كباب</h3>
+
+        <!-- Plat 3: Baklava -->
+        <div class="dish-card" onclick="showPrice('Baklava aux Pistaches', '45 DH')">
+            <div class="image-wrapper">
+                <img src="https://cdn.salla.sa/VqOGnd/5a1594f2-cb9f-4f6e-8910-c0bee8d03128-1000x666.66666666667-KPE80ZVZb93MAdOimkUqp1scw6AO3G6krrOfTDup.jpg" alt="Baklava">
+                <div class="overlay">
+                    <span class="view-price">Voir le prix</span>
+                </div>
+            </div>
+            <div class="dish-info">
+                <h3>Baklava Royal</h3>
+                <p>Feuilleté sucré aux pistaches et miel, un délice oriental.</p>
+            </div>
         </div>
-    </div>
+    </main>
+
+    <!-- Liaison avec le fichier JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>

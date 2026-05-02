@@ -1,23 +1,28 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>مطعم إلهام - القائمة العالمية</title>
+    <title>Ilham Food - Accueil & Menu</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>🍴 مطعم إلهام</h1>
-        <p>مرحباً بكم! اختاروا وجهتكم المفضلة:</p>
-    </header>
+    <!-- Section Bienvenue -->
+    <div class="hero">
+        <img src="https://cdn-icons-png.flaticon.com/512/3448/3448609.png" class="logo" alt="Logo">
+        <h1>ILHAM FOOD</h1>
+        <p>Bienvenue au Restaurant Ilham pour la Cuisine Internationale</p>
+        <a href="#categories" class="btn-menu">VOIR LE MENU</a>
+    </div>
 
-    <nav class="menu-nav">
-        <a href="maroc.html" class="nav-card">المغرب 🇲🇦</a>
-        <a href="chine.html" class="nav-card">الصين 🇨🇳</a>
-        <a href="italie.html" class="nav-card">إيطاليا 🇮🇹</a>
-        <a href="turkey.html" class="nav-card">تركيا 🇹🇷</a>
-    </nav>
-    
-    <script src="script.js"></script>
+    <!-- Section Catégories (Menu) -->
+    <section id="categories" class="categories-section">
+        <h2>Nos Cuisines</h2>
+        <div class="categories-grid">
+            <a href="maroc.html" class="cat-card">🇲🇦 Marocaine</a>
+            <a href="italie.html" class="cat-card">🇮🇹 Italienne</a>
+            <a href="chine.html" class="cat-card">🇨🇳 Chinoise</a>
+            <a href="turkey.html" class="cat-card">🇹🇷 Turque</a>
+        </div>
+    </section>
 </body>
 </html>

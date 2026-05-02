@@ -1,36 +1,32 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>المطبخ المغربي</title>
+    <title>Cuisine Marocaine</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <a href="index.html">🏠 العودة للرئيسية</a>
-        <h1>المطبخ المغربي 🇲🇦</h1>
+    <header style="background: white; padding: 20px;">
+        <a href="menu.html" style="color: #c0392b; text-decoration: none; font-weight: bold;">← Retour au Menu</a>
+        <h1 style="color: #c0392b;">Cuisine Marocaine 🇲🇦</h1>
     </header>
 
     <div class="dishes-container">
-        <!-- الأكلة 1 -->
-        <div class="dish-card" onclick="showPrice('طجين بالبرقوق', '80 درهم')">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbf7CogHqUupMXWvSxwObX5ULGERAB0K8sJw&s" alt="طجين">
-            <h3>الطجين</h3>
+        <div class="dish-card">
+            <img src="https://www.cuisinejoie.com/wp-content/uploads/2025/11/cuisson-tajine-poulet-marocain.webp" alt="Tajine">
+            <div class="price-tag">85 DH</div>
+            <div class="dish-info"><h3>Tajine de Viande</h3></div>
         </div>
-        
-        <!-- الأكلة 2 -->
-        <div class="dish-card" onclick="showPrice('كسكس بسبع خضاري', '70 درهم')">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAQFFEVoWsnE4s185qpiBgjXjBWcmE3tyorg&s" alt="كسكس">
-            <h3>الكسكس</h3>
+        <div class="dish-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAQFFEVoWsnE4s185qpiBgjXjBWcmE3tyorg&s" alt="Couscous">
+            <div class="price-tag">90 DH</div>
+            <div class="dish-info"><h3>Couscous Royal</h3></div>
         </div>
-
-        <!-- الأكلة 3 -->
-        <div class="dish-card" onclick="showPrice('طنجية مراكشية', '90 درهم')">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGFRW_XflUqCi0tKNawXVA-asuKzS2yFByRw&s" alt="طنجية">
-            <h3>الطنجية</h3>
+        <div class="dish-card">
+            <img src="https://www.marrakeche.com/wp-content/uploads/2021/02/A-Taste-of-Marrakech-Tender-Tanjia-Ready-to-Serve-scaled.jpg" alt="Tanjia">
+            <div class="price-tag">110 DH</div>
+            <div class="dish-info"><h3>Tanjia Marrakchia</h3></div>
         </div>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>

@@ -1,30 +1,69 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>المطبخ الإيطالي 🇮🇹</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ilham Food - Cuisine Italienne</title>
+    <!-- ربط ملف الستايل -->
     <link rel="stylesheet" href="style.css">
+    <!-- إضافة خطوط أنيقة -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <a href="index.html" class="back-btn">🏠 الصفحة الرئيسية</a>
-        <h1>المطبخ الإيطالي 🇮🇹</h1>
+
+    <header class="page-header">
+        <div class="header-content">
+            <a href="index.html" class="back-btn">← Retour à l'accueil</a>
+            <h1>Cuisine Italienne 🇮🇹</h1>
+            <p>Découvrez les saveurs authentiques de l'Italie</p>
+        </div>
     </header>
 
-    <div class="dishes-container">
-        <div class="dish-card" onclick="showPrice('بيتزا مارغريتا', '75 درهم')">
-            <img src="https://kitchen.sayidaty.net/uploads/small/39/398851899d0b6866f2506677d59b2d32_w750_h750.jpg" alt="Pizza">
-            <h3>بيتزا مارغريتا</h3>
+    <main class="dishes-container">
+        <!-- الأكلة الأولى: البيتزا -->
+        <div class="dish-card" onclick="showPrice('Pizza Margherita', '75 DH')">
+            <div class="image-wrapper">
+                <img src="https://kitchen.sayidaty.net/uploads/small/39/398851899d0b6866f2506677d59b2d32_w750_h750.jpg" alt="Pizza Margherita">
+                <div class="overlay">
+                    <span class="view-price">Voir le prix</span>
+                </div>
+            </div>
+            <div class="dish-info">
+                <h3>Pizza Margherita</h3>
+                <p>Sauce tomate, mozzarella fresh et basilic.</p>
+            </div>
         </div>
-        <div class="dish-card" onclick="showPrice('باستا كاربونارا', '65 درهم')">
-            <img src="https://ellearabia.com/media/cache/post_photo_desktop/files/cms/standalone-content/thumbnail/65aad4adca4e1434016845.jpg" alt="Pasta">
-            <h3>باستا كاربونارا</h3>
+
+        <!-- الأكلة الثانية: الباستا -->
+        <div class="dish-card" onclick="showPrice('Pasta Carbonara', '65 DH')">
+            <div class="image-wrapper">
+                <img src="https://cdn.sotor.com/thumbs/fit630x300/29775/1573340225/%D8%B7%D8%B1%D9%8A%D9%82%D8%A9_%D8%B9%D9%85%D9%84_%D8%A7%D9%84%D8%A8%D8%A7%D8%B3%D8%AA%D8%A7_%D8%A7%D9%84%D8%A5%D9%8A%D8%B7%D8%A7%D9%84%D9%8A%D8%A9.jpg" alt="Pasta Carbonara">
+                <div class="overlay">
+                    <span class="view-price">Voir le prix</span>
+                </div>
+            </div>
+            <div class="dish-info">
+                <h3>Pasta Carbonara</h3>
+                <p>Spaghetti avec crème, lardons et parmesan.</p>
+            </div>
         </div>
-        <div class="dish-card" onclick="showPrice('لازانيا إيطالية', '85 درهم')">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDWJmYiueoMusRorxC773hdzJ-wR-lhoEztQ&s" alt="Lasagna">
-            <h3>لازانيا إيطالية</h3>
+
+        <!-- الأكلة الثالثة: لازانيا -->
+        <div class="dish-card" onclick="showPrice('Lasagna Classique', '85 DH')">
+            <div class="image-wrapper">
+                <img src="https://kitchen.sayidaty.net/uploads/small/00/006275c543928839aa3f57e28129e894_w750_h500.jpg" alt="Lasagna">
+                <div class="overlay">
+                    <span class="view-price">Voir le prix</span>
+                </div>
+            </div>
+            <div class="dish-info">
+                <h3>Lasagna Classique</h3>
+                <p>Couches de pâtes, sauce bolognaise et béchamel.</p>
+            </div>
         </div>
-    </div>
+    </main>
+
+    <!-- ربط ملف السكريبت -->
     <script src="script.js"></script>
 </body>
 </html>
