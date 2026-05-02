@@ -1,25 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<title>Italie</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>المطبخ الإيطالي 🇮🇹</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <header>
+        <a href="index.html" class="back-btn">🏠 الصفحة الرئيسية</a>
+        <h1>المطبخ الإيطالي 🇮🇹</h1>
+    </header>
 
-<h1>🇮🇹 Cuisine Italienne</h1>
-
-<div class="food" onmouseover="show(this,'Pizza',70,'fromage + tomate')" onmouseout="hide(this)">
-  <img src="https://images.unsplash.com/photo-1548365328-9f547f8f1c5f" width="200"><br>
-  Pizza 🍕
-</div>
-
-<div class="food" onmouseover="show(this,'Pasta',60,'pâtes + sauce tomate')" onmouseout="hide(this)">
-  <img src="https://images.unsplash.com/photo-1523986371872-9d3ba2e2f642" width="200"><br>
-  Pasta 🍝
-</div>
-
-<script src="script.js"></script>
+    <div class="dishes-container">
+        <div class="dish-card" onclick="showPrice('بيتزا مارغريتا', '75 درهم')">
+            <img src="https://kitchen.sayidaty.net/uploads/small/39/398851899d0b6866f2506677d59b2d32_w750_h750.jpg" alt="Pizza">
+            <h3>بيتزا مارغريتا</h3>
+        </div>
+        <div class="dish-card" onclick="showPrice('باستا كاربونارا', '65 درهم')">
+            <img src="https://ellearabia.com/media/cache/post_photo_desktop/files/cms/standalone-content/thumbnail/65aad4adca4e1434016845.jpg" alt="Pasta">
+            <h3>باستا كاربونارا</h3>
+        </div>
+        <div class="dish-card" onclick="showPrice('لازانيا إيطالية', '85 درهم')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDWJmYiueoMusRorxC773hdzJ-wR-lhoEztQ&s" alt="Lasagna">
+            <h3>لازانيا إيطالية</h3>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

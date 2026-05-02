@@ -1,26 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 20px;
+}
+
+.menu-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.nav-card {
+    padding: 20px;
+    background: #e67e22;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
 .dishes-container {
     display: flex;
-    gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
 }
 
 .dish-card {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     cursor: pointer;
-    transition: transform 0.3s;
-    text-align: center;
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 10px;
+    transition: 0.3s;
 }
 
 .dish-card:hover {
-    transform: scale(1.05); /* كيتحرك شوية فاش كدوز عليه الماوس */
+    transform: scale(1.05);
 }
 
 .dish-card img {
-    width: 200px;
-    height: 150px;
+    width: 250px;
+    height: 180px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 10px;
 }

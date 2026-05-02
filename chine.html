@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<title>Chine</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>المطبخ الصيني 🇨🇳</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <header>
+        <a href="index.html" class="back-btn">🏠 الصفحة الرئيسية</a>
+        <h1>المطبخ الصيني 🇨🇳</h1>
+    </header>
 
-<h1>🇨🇳 Cuisine Chinoise</h1>
-
-<div class="food" onmouseover="show(this,'Noodles',55,'nouilles + sauce soja + légumes')" onmouseout="hide(this)">
-  <img src="https://images.unsplash.com/photo-1604908176997-125f25cc500f" width="200"><br>
-  Noodles 🍜
-</div>
-
-<div class="food" onmouseover="show(this,'Fried Rice',60,'riz + œufs + légumes')" onmouseout="hide(this)">
-  <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b" width="200"><br>
-  Fried Rice 🍚
-</div>
-
-<div class="food" onmouseover="show(this,'Dumplings',65,'pâte + viande + légumes')" onmouseout="hide(this)">
-  <img src="https://images.unsplash.com/photo-1625938144755-652e08e3595b" width="200"><br>
-  Dumplings 🥟
-</div>
-
-<script src="script.js"></script>
+    <div class="dishes-container">
+        <div class="dish-card" onclick="showPrice('نودلز بالخضر', '55 درهم')">
+            <img src="https://www.lazezh.com/wp-content/uploads/gcMigration/recipes/l/lazezh_a235de713d.jpg" alt="Noodles">
+            <h3>نودلز بالخضر</h3>
+        </div>
+        <div class="dish-card" onclick="showPrice('ديم سام', '60 درهم')">
+            <img src="https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/food_pics_v2/medium/dim_sum_with_chicken.jpg" alt="Dim Sum">
+            <h3>ديم سام (زلابية)</h3>
+        </div>
+        <div class="dish-card" onclick="showPrice('دجاج كونغ باو', '70 درهم')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEerLi4yZC_vi7rdjvxuu7qPDEuxIdO2xfNA&s" alt="Chicken">
+            <h3>دجاج كونغ باو</h3>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

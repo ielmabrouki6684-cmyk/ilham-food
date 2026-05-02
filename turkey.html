@@ -1,25 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<title>France</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>المطبخ التركي 🇹🇷</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <header>
+        <a href="index.html" class="back-btn">🏠 الصفحة الرئيسية</a>
+        <h1>المطبخ التركي 🇹🇷</h1>
+    </header>
 
-<h1>🇫🇷 Cuisine Française</h1>
-
-<div class="food" onmouseover="show(this,'Croissant',20,'farine + beurre')" onmouseout="hide(this)">
-  <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec" width="200"><br>
-  Croissant 🥐
-</div>
-
-<div class="food" onmouseover="show(this,'Crêpe',25,'œufs + lait')" onmouseout="hide(this)">
-  <img src="https://images.unsplash.com/photo-1587733086442-8f6f4f2f4f4f" width="200"><br>
-  Crêpe 🥞
-</div>
-
-<script src="script.js"></script>
+    <div class="dishes-container">
+        <div class="dish-card" onclick="showPrice('أضنة كباب', '80 درهم')">
+            <img src="https://api.americangarden.us/wp-content/uploads/2024/02/Adana-Kebab.jpg" alt="Kebab">
+            <h3>أضنة كباب</h3>
+        </div>
+        <div class="dish-card" onclick="showPrice('بقلاوة تركية', '40 درهم')">
+            <img src="https://cdn.salla.sa/VqOGnd/5a1594f2-cb9f-4f6e-8910-c0bee8d03128-1000x666.66666666667-KPE80ZVZb93MAdOimkUqp1scw6AO3G6krrOfTDup.jpg" alt="Baklava">
+            <h3>بقلاوة تركية</h3>
+        </div>
+        <div class="dish-card" onclick="showPrice('إسكندر كباب', '95 درهم')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_k7f8rYR1vc6sIRuHI6kJwuHALt-GBz1J9A&s" alt="Iskender">
+            <h3>إسكندر كباب</h3>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

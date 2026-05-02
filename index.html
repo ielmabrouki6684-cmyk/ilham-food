@@ -1,75 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<title>ILHAM FOOD</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>مطعم إلهام - القائمة العالمية</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <header>
+        <h1>🍴 مطعم إلهام</h1>
+        <p>مرحباً بكم! اختاروا وجهتكم المفضلة:</p>
+    </header>
 
-<header>
-  <h1>🍽️ ILHAM FOOD</h1>
-</header>
-
-<h2>Choisir un pays 🌍</h2>
-
-<div class="menu">
-
-  <button onclick="showCountry('maroc')">🇲🇦 Maroc</button>
-  <button onclick="showCountry('italie')">🇮🇹 Italie</button>
-  <button onclick="showCountry('france')">🇫🇷 France</button>
-  <button onclick="showCountry('chine')">🇨🇳 Chine</button>
-
-</div>
-
-<!-- SECTION MAROC -->
-<div id="maroc" class="country">
-
-  <h2>Maroc 🇲🇦</h2>
-
-  <img onclick="showFood('Tajine',50,'viande + légumes')" src="https://source.unsplash.com/200x150/?tajine" />
-  <img onclick="showFood('Couscous',60,'semoule + légumes')" src="https://source.unsplash.com/200x150/?couscous" />
-  <img onclick="showFood('Pastilla',70,'poulet + amandes')" src="https://source.unsplash.com/200x150/?pastilla" />
-
-</div>
-
-<!-- ITALIE -->
-<div id="italie" class="country">
-
-  <h2>Italie 🇮🇹</h2>
-
-  <img onclick="showFood('Pizza',70,'fromage + tomate')" src="https://source.unsplash.com/200x150/?pizza" />
-  <img onclick="showFood('Pasta',60,'pâtes + sauce')" src="https://source.unsplash.com/200x150/?pasta" />
-  <img onclick="showFood('Lasagna',80,'viande + béchamel')" src="https://source.unsplash.com/200x150/?lasagna" />
-
-</div>
-
-<!-- FRANCE -->
-<div id="france" class="country">
-
-  <h2>France 🇫🇷</h2>
-
-  <img onclick="showFood('Croissant',20,'beurre + farine')" src="https://source.unsplash.com/200x150/?croissant" />
-  <img onclick="showFood('Crêpe',25,'lait + œufs')" src="https://source.unsplash.com/200x150/?crepe" />
-  <img onclick="showFood('Ratatouille',50,'légumes')" src="https://source.unsplash.com/200x150/?ratatouille" />
-
-</div>
-
-<!-- CHINE -->
-<div id="chine" class="country">
-
-  <h2>Chine 🇨🇳</h2>
-
-  <img onclick="showFood('Noodles',55,'nouilles + sauce soja')" src="https://source.unsplash.com/200x150/?noodles" />
-  <img onclick="showFood('Fried Rice',60,'riz + légumes')" src="https://source.unsplash.com/200x150/?fried-rice" />
-  <img onclick="showFood('Dumplings',65,'pâte + viande')" src="https://source.unsplash.com/200x150/?dumplings" />
-
-</div>
-
-<!-- BOX INFO -->
-<div id="box"></div>
-
-<script src="script.js"></script>
+    <nav class="menu-nav">
+        <a href="maroc.html" class="nav-card">المغرب 🇲🇦</a>
+        <a href="chine.html" class="nav-card">الصين 🇨🇳</a>
+        <a href="italie.html" class="nav-card">إيطاليا 🇮🇹</a>
+        <a href="turkey.html" class="nav-card">تركيا 🇹🇷</a>
+    </nav>
+    
+    <script src="script.js"></script>
 </body>
 </html>
