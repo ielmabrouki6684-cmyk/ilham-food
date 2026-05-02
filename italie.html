@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Italie</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Italie</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<h2>Cuisine Italienne 🇮🇹</h2>
+<h1>🇮🇹 Cuisine Italienne</h1>
 
-<p onclick="showFood('Pizza',70,'fromage + tomate + olives')">
-Pizza 🍕
-</p>
+<div class="food" onmouseover="show(this,'Pizza',70,'fromage + tomate')" onmouseout="hide(this)">
+  <img src="https://images.unsplash.com/photo-1548365328-9f547f8f1c5f" width="200"><br>
+  Pizza 🍕
+</div>
 
-<p onclick="showFood('Pasta',60,'pâtes + sauce tomate + fromage')">
-Pasta 🍝
-</p>
-
-<p onclick="showFood('Lasagna',80,'pâtes + viande + béchamel')">
-Lasagna 🧀
-</p>
+<div class="food" onmouseover="show(this,'Pasta',60,'pâtes + sauce tomate')" onmouseout="hide(this)">
+  <img src="https://images.unsplash.com/photo-1523986371872-9d3ba2e2f642" width="200"><br>
+  Pasta 🍝
+</div>
 
 <script src="script.js"></script>
 </body>

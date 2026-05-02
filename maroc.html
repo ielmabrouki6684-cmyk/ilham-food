@@ -1,21 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Maroc</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<!-- قسم المنيو المغربي -->
+<section class="cuisine-section">
+    <h2>المطبخ المغربي 🇲🇦</h2>
+    <div class="dishes-container">
+        <!-- أكلة: الطجين -->
+        <div class="dish-card" onclick="showPrice('طجين بالبرقوق', '80 درهم')">
+            <img src="tajine.jpg" alt="طجين">
+            <h3>الطجين</h3>
+        </div>
+        
+        <!-- أكلة: الكسكس -->
+        <div class="dish-card" onclick="showPrice('كسكس بسبع خضاري', '70 درهم')">
+            <img src="couscous.jpg" alt="كسكس">
+            <h3>الكسكس</h3>
+        </div>
 
-<h2>Cuisine Marocaine 🇲🇦</h2>
-
-<p onclick="showFood('Tajine',50,'viande + légumes')">
-Tajine 🍲
-</p>
-
-<p onclick="showFood('Couscous',60,'semoule + légumes')">
-Couscous 🍛
-</p>
-
-<script src="script.js"></script>
-</body>
-</html>
+        <!-- أكلة: الطنجية -->
+        <div class="dish-card" onclick="showPrice('طنجية مراكشية', '90 درهم')">
+            <img src="tanjia.jpg" alt="طنجية">
+            <h3>الطنجية</h3>
+        </div>
+    </div>
+</section>

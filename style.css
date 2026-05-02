@@ -1,26 +1,26 @@
-body{
-  font-family: Arial;
-  margin:0;
-  background:#f5f5f5;
+.dishes-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-header{
-  background:black;
-  color:white;
-  padding:15px;
-  display:flex;
-  justify-content:space-between;
+.dish-card {
+    cursor: pointer;
+    transition: transform 0.3s;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
 }
 
-nav a{
-  color:white;
-  margin:0 10px;
-  text-decoration:none;
+.dish-card:hover {
+    transform: scale(1.05); /* كيتحرك شوية فاش كدوز عليه الماوس */
 }
 
-.hero{
-  text-align:center;
-  padding:60px;
-  background:orange;
-  color:white;
+.dish-card img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
 }
