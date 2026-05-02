@@ -1,35 +1,28 @@
-// Function to show the price in a stylish way
-function showPrice(dishName, price) {
-    // Create a stylish modal overlay
-    const modal = document.createElement('div');
-    modal.className = 'custom-modal';
-    
-    modal.innerHTML = `
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <div class="modal-body">
-                <h2>${dishName}</h2>
-                <div class="price-value">${price}</div>
-                <p>Merci de choisir ILHAM FOOD !</p>
-                <button class="confirm-btn">D'accord</button>
+function showDetails(nom, prix, desc) {
+    // 1. كود كيبني النافذة المنبثقة وسط الصفحة
+    const html = `
+        <div class="modal-overlay" id="modal" onclick="closeModal()">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <h2 style="margin-top:0; font-family: 'Cinzel', serif; color: #d4af37;">${nom}</h2>
+                <p style="color: #d4af37; font-size: 1.5rem; font-weight: bold; margin: 15px 0;">${prix}</p>
+                <p style="line-height: 1.6; color: #fff; font-family: 'Poppins', sans-serif;">${desc}</p>
+                <button onclick="closeModal()" style="background: #d4af37; border: none; padding: 10px 25px; border-radius: 20px; cursor: pointer; font-weight: bold; margin-top: 20px;">Fermer</button>
             </div>
         </div>
     `;
 
-    document.body.appendChild(modal);
+    // 2. كيزيد هاد الكود لآخر الصفحة باش يظهر للعيان
+    document.body.insertAdjacentHTML('beforeend', html);
 
-    // Close functionality
-    const closeBtn = modal.querySelector('.close-btn');
-    const confirmBtn = modal.querySelector('.confirm-btn');
+    // 3. كيبين النافذة بحركة سلسة
+    const modal = document.getElementById('modal');
+    modal.style.display = 'flex';
+}
 
-    const closeModal = () => {
-        modal.style.opacity = '0';
-        setTimeout(() => modal.remove(), 300);
-    };
-
-    closeBtn.onclick = closeModal;
-    confirmBtn.onclick = closeModal;
-    window.onclick = (event) => {
-        if (event.target == modal) closeModal();
-    };
+function closeModal() {
+    // 4. كيمسح النافذة فاش كنضغطو على زر الإغلاق أو خارج الإطار
+    const modal = document.getElementById('modal');
+    if (modal) {
+        modal.remove();
+    }
 }

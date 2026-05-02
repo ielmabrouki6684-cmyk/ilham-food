@@ -2,27 +2,183 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Ilham Food - Accueil & Menu</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Section Bienvenue -->
-    <div class="hero">
-        <img src="https://cdn-icons-png.flaticon.com/512/3448/3448609.png" class="logo" alt="Logo">
-        <h1>ILHAM FOOD</h1>
-        <p>Bienvenue au Restaurant Ilham pour la Cuisine Internationale</p>
-        <a href="#categories" class="btn-menu">VOIR LE MENU</a>
-    </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ilham Food | Excellence Culinaire</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Poppins', sans-serif;
+            background-color: #000;
+            color: #fff;
+            overflow: hidden; /* كيحبس السكرول بالكيبورد */
+        }
 
-    <!-- Section Catégories (Menu) -->
-    <section id="categories" class="categories-section">
-        <h2>Nos Cuisines</h2>
-        <div class="categories-grid">
-            <a href="maroc.html" class="cat-card">🇲🇦 Marocaine</a>
-            <a href="italie.html" class="cat-card">🇮🇹 Italienne</a>
-            <a href="chine.html" class="cat-card">🇨🇳 Chinoise</a>
-            <a href="turkey.html" class="cat-card">🇹🇷 Turque</a>
+        /* الشاشة السوداء الأولى */
+        #home {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle, #1a1a1a 0%, #000 100%);
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .logo {
+            width: 150px;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 10px #d4af37);
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            color: #d4af37;
+            letter-spacing: 5px;
+            margin: 0;
+        }
+
+        .enter-btn {
+            margin-top: 30px;
+            padding: 12px 35px;
+            background: transparent;
+            color: #d4af37;
+            border: 2px solid #d4af37;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.4s;
+            font-size: 1rem;
+        }
+
+        .enter-btn:hover {
+            background: #d4af37;
+            color: #000;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+        }
+
+        /* صفحة المنيو */
+        #menu-selection {
+            position: fixed; /* باش يبقا ثابت ويتحرك غير بالأوامر */
+            top: 100%; 
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: #0a0a0a;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 10;
+        }
+
+        /* --- السهم اللي كيرجعك لفوق --- */
+        .back-arrow {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            width: 45px;
+            height: 45px;
+            border: 2px solid #d4af37;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #d4af37;
+            font-size: 24px;
+            cursor: pointer;
+            transition: 0.3s;
+            background: rgba(212, 175, 55, 0.1);
+        }
+
+        .back-arrow:hover {
+            background: #d4af37;
+            color: #000;
+            transform: scale(1.1);
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            color: #d4af37;
+            margin-bottom: 50px;
+            font-size: 2rem;
+        }
+
+        .grid-countries {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            width: 80%;
+            max-width: 900px;
+        }
+
+        .country-card {
+            background: #151515;
+            padding: 40px 20px;
+            border-radius: 15px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            text-align: center;
+            border: 1px solid #333;
+            transition: 0.3s;
+        }
+
+        .country-card:hover {
+            border-color: #d4af37;
+            transform: translateY(-10px);
+            background: #1a1a1a;
+        }
+
+        .country-card span {
+            display: block;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* الحركات */
+        .active-menu #home { transform: translateY(-100%); }
+        .active-menu #menu-selection { transform: translateY(-100%); }
+    </style>
+</head>
+<body id="main-body">
+
+    <!-- الشاشة الرئيسية -->
+    <section id="home">
+        <img src="https://cdn-icons-png.flaticon.com/512/3448/3448609.png" alt="Logo" class="logo">
+        <h1>RESTAURANT ILHAM</h1>
+        <button class="enter-btn" onclick="toggleMenu(true)">DÉCOUVRIR LE MENU</button>
+    </section>
+
+    <!-- صفحة المنيو -->
+    <section id="menu-selection">
+        <!-- السهم دابا باين وواضح فـ الجنب -->
+        <div class="back-arrow" onclick="toggleMenu(false)">↑</div>
+        
+        <h2>NOS CUISINES</h2>
+        <div class="grid-countries">
+            <a href="maroc.html" class="country-card"><span>🇲🇦</span> MAROCAINE</a>
+            <a href="italie.html" class="country-card"><span>🇮🇹</span> ITALIENNE</a>
+            <a href="chine.html" class="country-card"><span>🇨🇳</span> CHINOISE</a>
+            <a href="turkey.html" class="country-card"><span>🇹🇷</span> TURQUE</a>
         </div>
     </section>
+
+    <script>
+        function toggleMenu(isOpen) {
+            const body = document.getElementById('main-body');
+            if (isOpen) {
+                body.classList.add('active-menu');
+            } else {
+                body.classList.remove('active-menu');
+            }
+        }
+    </script>
+
 </body>
 </html>

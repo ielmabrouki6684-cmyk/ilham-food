@@ -3,67 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ilham Food - Cuisine Italienne</title>
-    <!-- ربط ملف الستايل -->
+    <title>Cuisine Italienne 🇮🇹</title>
     <link rel="stylesheet" href="style.css">
-    <!-- إضافة خطوط أنيقة -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body style="background-color: #000; color: #fff; margin: 0; font-family: sans-serif;">
 
-    <header class="page-header">
-        <div class="header-content">
-            <a href="index.html" class="back-btn">← Retour à l'accueil</a>
-            <h1>Cuisine Italienne 🇮🇹</h1>
-            <p>Découvrez les saveurs authentiques de l'Italie</p>
-        </div>
+    <!-- سهم الرجوع للمنيو الرئيسي -->
+    <header style="padding: 20px; display: flex; align-items: center;">
+        <a href="index.html" style="color: #d4af37; text-decoration: none; font-size: 35px; margin-right: 20px;">←</a>
+        <h1 style="flex-grow: 1; text-align: center; color: #d4af37; margin: 0; font-family: serif; letter-spacing: 2px;">CUISINE ITALIENNE</h1>
     </header>
 
-    <main class="dishes-container">
-        <!-- الأكلة الأولى: البيتزا -->
-        <div class="dish-card" onclick="showPrice('Pizza Margherita', '75 DH')">
-            <div class="image-wrapper">
-                <img src="https://kitchen.sayidaty.net/uploads/small/39/398851899d0b6866f2506677d59b2d32_w750_h750.jpg" alt="Pizza Margherita">
-                <div class="overlay">
-                    <span class="view-price">Voir le prix</span>
-                </div>
-            </div>
-            <div class="dish-info">
-                <h3>Pizza Margherita</h3>
-                <p>Sauce tomate, mozzarella fresh et basilic.</p>
-            </div>
+    <!-- تنظيم الصور: 2 مقابلين 2 (Grid) -->
+    <main style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; padding: 25px; max-width: 800px; margin: auto;">
+        
+        <!-- الأكلة 1: البيتزا -->
+        <div class="dish" style="cursor: pointer; text-align: center;" onclick="showDetails('Pizza Margherita', '85 DH', 'Une pizza classique avec une sauce tomate savoureuse, de la mozzarella fondante et du basilic frais.')">
+            <img src="https://kitchen.sayidaty.net/uploads/small/39/398851899d0b6866f2506677d59b2d32_w750_h750.jpg" alt="Pizza" style="width: 100%; border-radius: 10px; border: 1px solid #333;">
+            <p style="margin-top: 10px; font-weight: bold; color: #d4af37;">Pizza Margherita</p>
         </div>
 
-        <!-- الأكلة الثانية: الباستا -->
-        <div class="dish-card" onclick="showPrice('Pasta Carbonara', '65 DH')">
-            <div class="image-wrapper">
-                <img src="https://cdn.sotor.com/thumbs/fit630x300/29775/1573340225/%D8%B7%D8%B1%D9%8A%D9%82%D8%A9_%D8%B9%D9%85%D9%84_%D8%A7%D9%84%D8%A8%D8%A7%D8%B3%D8%AA%D8%A7_%D8%A7%D9%84%D8%A5%D9%8A%D8%B7%D8%A7%D9%84%D9%8A%D8%A9.jpg" alt="Pasta Carbonara">
-                <div class="overlay">
-                    <span class="view-price">Voir le prix</span>
-                </div>
-            </div>
-            <div class="dish-info">
-                <h3>Pasta Carbonara</h3>
-                <p>Spaghetti avec crème, lardons et parmesan.</p>
-            </div>
+        <!-- الأكلة 2: الباستا -->
+        <div class="dish" style="cursor: pointer; text-align: center;" onclick="showDetails('Pasta Carbonara', '75 DH', 'Des spaghettis italiens authentiques avec une sauce crémeuse, du parmesan et du poivre noir.')">
+            <img src="https://cnn-arabic-images.cnn.io/cloudinary/image/upload/w_1920,h_1080,c_fill,q_auto,g_center/cnnarabic/2021/02/18/images/177957.jpg" alt="Pasta" style="width: 100%; border-radius: 10px; border: 1px solid #333;">
+            <p style="margin-top: 10px; font-weight: bold; color: #d4af37;">Pasta Carbonara</p>
         </div>
 
-        <!-- الأكلة الثالثة: لازانيا -->
-        <div class="dish-card" onclick="showPrice('Lasagna Classique', '85 DH')">
-            <div class="image-wrapper">
-                <img src="https://kitchen.sayidaty.net/uploads/small/00/006275c543928839aa3f57e28129e894_w750_h500.jpg" alt="Lasagna">
-                <div class="overlay">
-                    <span class="view-price">Voir le prix</span>
-                </div>
-            </div>
-            <div class="dish-info">
-                <h3>Lasagna Classique</h3>
-                <p>Couches de pâtes, sauce bolognaise et béchamel.</p>
-            </div>
+        <!-- الأكلة 3: اللازانيا -->
+        <div class="dish" style="cursor: pointer; text-align: center;" onclick="showDetails('Lasagne Classique', '95 DH', 'Couches de pâtes fraîches avec une sauce bolognaise riche, de la béchamel et du fromage gratiné.')">
+            <img src="https://cdn.alweb.com/thumbs/atbaqalpasta/article/fit727x484/%D9%83%D9%8A%D9%81-%D8%AA%D8%AD%D8%B6%D8%B1%D9%8A%D9%86-%D8%A7%D9%84%D9%84%D8%A7%D8%B2%D8%A7%D9%86%D9%8A%D8%A7-%D8%A7%D9%84%D8%A5%D9%8A%D8%B7%D8%A7%D9%84%D9%8A%D8%A9.jpg" alt="Lasagne" style="width: 100%; border-radius: 10px; border: 1px solid #333;">
+            <p style="margin-top: 10px; font-weight: bold; color: #d4af37;">Lasagne Classique</p>
         </div>
+
+        <!-- الأكلة 4: تيراميسو (الحلويات الإيطالية) -->
+        <div class="dish" style="cursor: pointer; text-align: center;" onclick="showDetails('Tiramisu Original', '55 DH', 'Le dessert italien par excellence, à base de mascarpone, café et biscuits imbibés.')">
+            <img src="https://arabicpost.net/wp-content/uploads/2020/03/istock-931757084.jpg" alt="Tiramisu" style="width: 100%; border-radius: 10px; border: 1px solid #333;">
+            <p style="margin-top: 10px; font-weight: bold; color: #d4af37;">Tiramisu Italien</p>
+        </div>
+
     </main>
+</main>
 
-    <!-- ربط ملف السكريبت -->
+    <!-- الربط بملف الجافاسكريبت الموحد -->
     <script src="script.js"></script>
 </body>
 </html>

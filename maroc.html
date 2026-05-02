@@ -2,31 +2,47 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Cuisine Marocaine</title>
+    <title>Cuisine Marocaine 🇲🇦</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header style="background: white; padding: 20px;">
-        <a href="menu.html" style="color: #c0392b; text-decoration: none; font-weight: bold;">← Retour au Menu</a>
-        <h1 style="color: #c0392b;">Cuisine Marocaine 🇲🇦</h1>
+<body style="background-color: #000; color: #fff;"> <!-- الشاشة سوداء -->
+    <!-- سهم الرجوع للمنيو الرئيسي -->
+    <header>
+        <a href="index.html" style="color: #d4af37; text-decoration: none; font-size: 30px;">←</a>
+        <h1 style="text-align: center; color: #d4af37;">CUISINE MAROCAINE</h1>
     </header>
 
-    <div class="dishes-container">
-        <div class="dish-card">
-            <img src="https://www.cuisinejoie.com/wp-content/uploads/2025/11/cuisson-tajine-poulet-marocain.webp" alt="Tajine">
-            <div class="price-tag">85 DH</div>
-            <div class="dish-info"><h3>Tajine de Viande</h3></div>
+    <!-- تنظيم الصور: 2 مقابلين 2 (Grid) -->
+    <main style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 20px;">
+        
+        <!-- الأكلة 1: الطجين -->
+        <div class="dish" onclick="showDetails('Tajine Marocain', '120 DH', 'Un plat traditionnel cuit lentement dans un pot en argile avec de la viande et des légumes.')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkAmqWVDiasE3K_9z_SGcmNHMmYRj9PNlBYQ&s" alt="Tajine" style="width: 100%;">
+            <p style="text-align: center;">Tajine Marocain</p>
         </div>
-        <div class="dish-card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAQFFEVoWsnE4s185qpiBgjXjBWcmE3tyorg&s" alt="Couscous">
-            <div class="price-tag">90 DH</div>
-            <div class="dish-info"><h3>Couscous Royal</h3></div>
+
+        <!-- الأكلة 2: الكسكس -->
+        <div class="dish" onclick="showDetails('Couscous Royal', '150 DH', 'Le plat emblématique du vendredi, servi avec sept légumes et de la viande savoureuse.')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAQFFEVoWsnE4s185qpiBgjXjBWcmE3tyorg&s" alt="Couscous" style="width: 100%;">
+            <p style="text-align: center;">Couscous Royal</p>
         </div>
-        <div class="dish-card">
-            <img src="https://www.marrakeche.com/wp-content/uploads/2021/02/A-Taste-of-Marrakech-Tender-Tanjia-Ready-to-Serve-scaled.jpg" alt="Tanjia">
-            <div class="price-tag">110 DH</div>
-            <div class="dish-info"><h3>Tanjia Marrakchia</h3></div>
+
+        <!-- الأكلة 3: الطنجية -->
+        <div class="dish" onclick="showDetails('Tanjia Marrakchia', '180 DH', 'Une spécialité de Marrakech cuite dans les cendres du four traditionnel.')">
+            <img src="https://decoracionmarroqui.com/cdn/shop/files/EsWldHmW4AA0XWg.jpg?v=1768699823&width=1200" alt="Tanjia" style="width: 100%;">
+            <p style="text-align: center;">Tanjia Marrakchia</p>
         </div>
-    </div>
+
+        <!-- الأكلة 4: الحلويات والشاي -->
+        <div class="dish" onclick="showDetails('Pâtisseries et Thé', '80 DH', 'Un assortiment de gâteaux marocains servis avec le célèbre thé à la menthe.')">
+            <img src="https://pbs.twimg.com/media/GKGHFWvXkAEpNCl.jpg" alt="Thé et Gâteaux" style="width: 100%;">
+            <p style="text-align: center;">Pâtisseries et Thé Marocain</p>
+        </div>
+
+    </main>
+</main>
+
+    <!-- الربط بملف الجافاسكريبت الموحد -->
+    <script src="script.js"></script>
 </body>
 </html>

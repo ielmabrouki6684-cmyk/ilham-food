@@ -1,34 +1,92 @@
-/* Custom Modal Styles */
-.custom-modal {
+/* الألوان والخطوط الأساسية */
+:root {
+    --gold: #d4af37;
+    --dark-bg: #0a0a0a;
+    --card-bg: #151515;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ستايل العناوين الفني */
+h1, h2 {
+    font-family: 'Cinzel', serif;
+    color: var(--gold);
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+/* تنظيم الصور (2 مقابلين 2) لجميع الصفحات */
+main, .grid-countries {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* ستايل "الأكلة" وتأثير الـ Hover */
+.dish, .country-card {
+    cursor: pointer;
+    text-align: center;
+    background: var(--card-bg);
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid #333;
+    transition: all 0.4s ease;
+}
+
+.dish:hover, .country-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+}
+
+.dish img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* سهم الرجوع الأنيق */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: var(--gold);
+    font-size: 30px;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+/* ستايل النافذة المنبثقة (Pop-up) */
+.modal-overlay {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.7);
-    display: flex; justify-content: center; align-items: center;
-    z-index: 1000; transition: 0.3s;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(5px);
+    display: none; /* مخفية في الأول */
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
 }
 
 .modal-content {
-    background: white; padding: 30px; border-radius: 20px;
-    text-align: center; position: relative; width: 300px;
-    animation: slideIn 0.4s ease-out;
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px solid var(--gold);
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+    animation: fadeIn 0.4s ease;
 }
 
-@keyframes slideIn {
-    from { transform: translateY(-50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-.price-value {
-    font-size: 2rem; color: #c0392b;
-    font-weight: bold; margin: 20px 0;
-}
-
-.confirm-btn {
-    background: #c0392b; color: white; border: none;
-    padding: 10px 25px; border-radius: 25px; cursor: pointer;
-}
-
-.close-btn {
-    position: absolute; top: 10px; right: 15px;
-    font-size: 25px; cursor: pointer; color: #888;
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
 }

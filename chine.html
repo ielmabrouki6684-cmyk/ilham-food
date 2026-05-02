@@ -3,67 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ilham Food - Cuisine Chinoise</title>
-    <!-- Liaison avec le fichier CSS -->
+    <title>Cuisine Chinoise 🇨🇳</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Polices élégantes -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body style="background-color: #000; color: #fff; margin: 0; font-family: sans-serif;">
 
-    <header class="page-header">
-        <div class="header-content">
-            <a href="index.html" class="back-btn">← Retour à l'accueil</a>
-            <h1>Cuisine Chinoise 🇨🇳</h1>
-            <p>Un voyage culinaire au cœur de l'Asie</p>
-        </div>
+    <!-- سهم الرجوع للمنيو الرئيسي -->
+    <header style="padding: 20px; display: flex; align-items: center;">
+        <a href="index.html" style="color: #d4af37; text-decoration: none; font-size: 35px; margin-right: 20px;">←</a>
+        <h1 style="flex-grow: 1; text-align: center; color: #d4af37; margin: 0; font-family: serif; letter-spacing: 2px;">CUISINE CHINOISE</h1>
     </header>
 
-    <main class="dishes-container">
-        <!-- Plat 1: Noodles -->
-        <div class="dish-card" onclick="showPrice('Noodles aux Légumes', '55 DH')">
-            <div class="image-wrapper">
-                <img src="https://cdn.alweb.com/thumbs/atbaqalpasta/article/fit727x484/1/%D9%88%D8%B5%D9%81%D8%A7%D8%AA-%D9%86%D9%88%D8%AF%D9%84%D8%B2-%D8%B5%D9%8A%D9%86%D9%8A.jpeg" alt="Noodles">
-                <div class="overlay">
-                    <span class="view-price">Voir le prix</span>
-                </div>
-            </div>
-            <div class="dish-info">
-                <h3>Noodles aux Légumes</h3>
-                <p>Pâtes sautées avec des légumes croquants et sauce soja.</p>
-            </div>
+    <!-- تنظيم الصور: 2 مقابلين 2 (Grid) -->
+    <main style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; padding: 25px; max-width: 800px; margin: auto;">
+        
+        <!-- الأكلة 1: نودلز -->
+        <div class="dish" style="cursor: pointer; text-align: center;" onclick="showDetails('Noodles Sauté aux Légumes', '65 DH', 'Des nouilles fines sautées au wok avec des légumes frais, du soja et des épices asiatiques.')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMfsZ8ev04Q5rIWqbChYWI0RZHQB1YXp0oIA&s" alt="Noodles" style="width: 100%; border-radius: 10px; border: 1px solid #333;">
+            <p style="margin-top: 10px; font-weight: bold; color: #d4af37;">Noodles aux Légumes</p>
         </div>
 
-        <!-- Plat 2: Dim Sum -->
-        <div class="dish-card" onclick="showPrice('Dim Sum Mixte', '60 DH')">
-            <div class="image-wrapper">
-                <img src="https://dine.mt/sites/default/files/photos/14183939_1735592966690456_8320627584779927119_n.jpg" alt="Dim Sum">
-                <div class="overlay">
-                    <span class="view-price">Voir le prix</span>
-                </div>
-            </div>
-            <div class="dish-info">
-                <h3>Dim Sum (Dumplings)</h3>
-                <p>Petites bouchées vapeur farcies à la viande ou crevettes.</p>
-            </div>
+        <!-- الأكلة 2: دجاج كونغ باو -->
+        <div class="dish" style="cursor: pointer; text-align: center;" onclick="showDetails('Poulet Kung Pao', '85 DH', 'Un plat épicé à base de dés de poulet, de cacahuètes, de légumes et de piments.')">
+            <img src="https://www.unileverfoodsolutionsarabia.com/dam/global-ufs/mcos/meps/arabia/calcmenu/recipes/AE-recipes/In-Development/kung-pao-chicken/main-header.jpg" alt="Poulet Kung Pao" style="width: 100%; border-radius: 10px; border: 1px solid #333;">
+            <p style="margin-top: 10px; font-weight: bold; color: #d4af37;">Poulet Kung Pao</p>
         </div>
 
-        <!-- Plat 3: Poulet Kung Pao -->
-        <div class="dish-card" onclick="showPrice('Poulet Kung Pao', '75 DH')">
-            <div class="image-wrapper">
-                <img src="" alt="Poulet Kung Pahttps://www.unileverfoodsolutionsarabia.com/dam/global-ufs/mcos/meps/arabia/calcmenu/recipes/AE-recipes/In-Development/kung-pao-chicken/main-header.jpgo">
-                <div class="overlay">
-                    <span class="view-price">Voir le prix</span>
-                </div>
-            </div>
-            <div class="dish-info">
-                <h3>Poulet Kung Pao</h3>
-                <p>Poulet sauté épicé avec des cacahuètes et des poivrons.</p>
-            </div>
+        <!-- الأكلة 3: ديم سام -->
+        <div class="dish" style="cursor: pointer; text-align: center;" onclick="showDetails('Dim Sum Vapeur', '70 DH', 'Petites bouchées cuites à la vapeur, farcies aux crevettes ou à la viande, servies dans des paniers en bambou.')">
+            <img src="https://elnashrastorageaccount.blob.core.windows.net/elnashra/elnashra/elfann/images/extralarge/9041069_1768996835.jpg" alt="Dim Sum" style="width: 100%; border-radius: 10px; border: 1px solid #333;">
+            <p style="margin-top: 10px; font-weight: bold; color: #d4af37;">Dim Sum Traditionnel</p>
         </div>
+
+        <!-- الأكلة 4: حلويات (كرات السمسم) -->
+        <div class="dish" style="cursor: pointer; text-align: center;" onclick="showDetails('Boules de Sésame', '45 DH', 'Une douceur chinoise croustillante à base de farine de riz gluant, fourrée à la pâte de haricots rouges et couverte de graines de sésame.')">
+            <img src="https://cdn.ready-market.com.tw/21cd62de/Templates/pic/ANKO-Sesame-Ball-1200x1200.jpg?v=36031efc" alt="Boules de sésame" style="width: 100%; border-radius: 10px; border: 1px solid #333;">
+            <p style="margin-top: 10px; font-weight: bold; color: #d4af37;">Boules de Sésame Sucrées</p>
+        </div>
+
     </main>
+</main>
 
-    <!-- Liaison avec le fichier JavaScript -->
+    <!-- الربط بملف الجافاسكريبت الموحد -->
     <script src="script.js"></script>
 </body>
 </html>
